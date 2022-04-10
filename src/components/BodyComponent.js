@@ -1,9 +1,15 @@
 import React from "react";
-import { FlexBox } from "../Style";
+import {
+  ArrowTextContainer,
+  BodyContainer,
+  FlexBox,
+  GridContainer,
+} from "../Style";
+import CircleArrowComponent from "./CircleArrowComponent";
 
 function BodyComponent(props) {
   return (
-    <div>
+    <>
       {/* Title and main description */}
       <FlexBox
         width="60%"
@@ -34,19 +40,69 @@ function BodyComponent(props) {
           models of new manufactured hames and new manufactured chalets!
         </div>
       </FlexBox>
-      <FlexBox width="calc(100% - 6rem);" flexDirection="row">
+      <BodyContainer height="60%" width="calc(100% - 10rem)">
         {/* Left Panel */}
+        <FlexBox width="20%" height="80%">
+          <div
+            style={{
+              fontWeight: "normal",
+              fontSize: "3rem",
+              letterSpacing: ".1rem",
+              fontFamily: "'Bebas Neue', cursive",
+            }}
+          >
+            1.2 M
+          </div>
+          <div
+            style={{
+              fontWeight: "normal",
+              fontFamily: "Segoe UI",
+            }}
+          >
+            Deification and worship of natural phenomena
+          </div>
+          <div style={{ fontFamily: "'Xanh Mono', monospace" }}>
+            <CircleArrowComponent
+              r={30}
+              text="OUR EXCLUSIVE ARTICLES"
+            ></CircleArrowComponent>
+          </div>
+
+          <div
+            style={{
+              fontWeight: "200",
+              fontFamily: "Segoe UI",
+              fontSize: "1.5rem",
+              letterSpacing: "0.03rem",
+            }}
+          >
+            THE ASSIGNMENT OF A PHYSICAL FORM TO GOD
+          </div>
+        </FlexBox>
+        {/* Middle Panel */}
+        <FlexBox width="60%">
+          <GridContainer>
+            <div class="a"></div>
+            <div class="b"></div>
+            <div class="c"></div>
+            <div class="d"></div>
+            <div class="e"></div>
+            <div class="f"></div>
+            <div class="g"></div>
+            <div class="h"></div>
+            <div class="i"></div>
+            <div class="j"></div>
+            <div class="k"></div>
+            <div class="l"></div>
+          </GridContainer>
+        </FlexBox>
+        {/* Right Panel */}
         <FlexBox width="20%">
           <div>1.2 M</div>
           <div>Deification and worship of natural phenomena</div>
         </FlexBox>
-        <FlexBox width="60%">GRIDBOX</FlexBox>
-        <FlexBox width="20%">
-          <div>1.2 M</div>
-          <div>Deification and worship of natural phenomena</div>
-        </FlexBox>
-      </FlexBox>
-    </div>
+      </BodyContainer>
+    </>
   );
 }
 
